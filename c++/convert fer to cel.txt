@@ -1,0 +1,59 @@
+//mca104
+//krupa
+//SECOND SEM
+
+/* PROGRAM=11.Define class calc represent temperature in celcius.  
+   Define member function to convert given celcius value in faherheit  value.
+   And also define operater overload + and -.
+   [ C = 5/9 * ( F + 32) ]
+*******************************************************/
+#include<iostream.h>
+class calc
+{
+	float cel;
+public:
+	void getdata();
+	void getdata(float x);
+	float operator -(float);
+	float operator +(float);
+};
+void calc :: getdata()
+{
+	cin >>cel;
+}
+void calc :: getdata(float x)
+{
+	cel=x;
+}
+float calc :: operator -(float x)
+{
+	return this->cel - x;
+}
+float calc :: operator +(float x)
+{
+	return this->cel + x;
+}
+void main()
+{
+	calc d;
+	float f=0.0,x;
+	cout<<"Enter the ferenhite :";
+	d.getdata();
+	f=(d-32);
+	f=float(5)/float(9)*f;
+	cout<<"Celcius =";
+	cout<<f<<endl;
+	cout<<"Enter the celcius :";
+	cin>>x;
+	f=float(9)/float(5)*x;
+	d.getdata(f);
+	f=(d+32);
+	cout<<"Ferenhite =";
+	cout<<f<<endl;
+}
+/****************** OUT PUT ***********************
+Enter the ferenhite :104
+Celcius =40
+Enter the celcius :40
+Ferenhite =104
+Press any key to continue*************************/

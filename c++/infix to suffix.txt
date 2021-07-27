@@ -1,0 +1,61 @@
+//mca 104
+//second sem
+//krupa
+//prog=dqueue
+/***************************************************************************/
+#include<iostream.h>
+#include<process.h>
+
+char nextchar(char *);
+int f(char);
+int r(char);
+
+void main();
+{
+	int i,rank;
+	char infix[10];,suffix[10],next,temp;
+
+	stack.st;
+	st.push('#');
+	suffix='\0',i=0;
+	next=nextchar(infix);
+
+	while(next!='#')
+	{
+		while (f(next<=f(st.peep()))
+		{
+			temp=st.pop();
+			suffix[i++]=temp;
+
+			ranl+=r(temp);
+			if(rank<=0)
+			{
+				cout<<"Invali expression";
+				exit;
+
+			}
+		}
+		st.push(next)
+			next=nextchar(infix);
+	}
+	while(temp=st.pop()!='#')
+
+	{
+		suffix[i++]=temp;
+		rank+=r(temp);
+		if(rank<=0)
+		{
+			cout<<"invalid";
+			exit;
+		}
+	}
+	suffix[i]='\0';
+	if(rank<=0)
+	{
+		cout<<"invalid";
+	}
+	else
+	{        
+		cout<<"suffix";
+	}
+}

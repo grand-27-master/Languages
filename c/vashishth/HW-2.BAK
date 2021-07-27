@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int a,b,c,amt;
+	clrscr();
+	printf("enter amount:");
+	scanf("%d",&amt);
+	a=amt/1000;
+	b=amt%1000/500;
+	c=amt%1000%500;
+	printf("\n\n denominations of 1000=%d",a);
+	printf("\n\n denominations of 500=%d",b);
+	printf("\n\n denominations of 100=%d",c);
+	getch();
+
+
+}

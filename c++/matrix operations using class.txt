@@ -1,0 +1,172 @@
+//MCA 104
+//KRUPA
+//SEM-2
+//PROGRAM-1
+//================================================================================
+#include<iostream.h>
+class counter 
+{
+	int count;
+public:
+	counter():
+	{
+
+	}
+	counter 
+
+    counter operator++()
+	{
+		++count;
+
+	}
+	int get count()
+	{
+		return (count)
+
+	}
+};
+
+void main()
+{
+	counter c1;
+	cout<<endl<<c1.getcount();
+	++c1;
+	cout<<endl<<c1.getcount();
+}
+
+//mca104
+//krupa
+//SECOND SEM
+
+/* PROGRAM=8.Create a Class Matrix which hold mxn data, and overload +, - 
+	and * operator to add , substract and multiply two Matrix 
+	type objecta.
+	
+e.g.
+	Matrix m1,m2;
+	Matrix m3 = m1 + m2;
+	etc... 
+
+********************************************************/
+#include<iostream.h>
+#include<stdlib.h>
+#include<iomanip.h>
+class matrix
+{
+	int arr[3][3];
+public:
+	void getdata();
+	void display();
+	matrix operator +(matrix m);
+	matrix operator -(matrix m);
+	matrix operator *(matrix m);
+	
+};
+void matrix :: getdata()
+	{
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<3;j++)
+			{
+				cout<<"Enter value of["<<i<<"]["<<j<<"] :";
+				cin>>arr[i][j];
+			}
+		}
+	}
+void matrix :: display()
+{
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			cout<<setw(3)<<arr[i][j];
+		}
+		cout<<endl;
+	}
+}
+matrix matrix :: operator +(matrix m)
+{
+	matrix temp;
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			temp.arr[i][j]=arr[i][j]+m.arr[i][j];
+		}
+	}
+	return temp;
+}
+matrix matrix :: operator -(matrix m)
+{
+	matrix temp;
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			temp.arr[i][j]=arr[i][j]-m.arr[i][j];
+		}
+	}
+	return temp;
+}
+matrix matrix :: operator *(matrix m)
+{
+	matrix temp;
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			temp.arr[i][j]=0;
+			for(int k=0;k<3;k++)
+			{
+				temp.arr[i][j]+=arr[i][k]*m.arr[k][j];
+			}
+		}
+	}
+	return temp;
+}
+
+
+void main()
+{
+	matrix m1,m2,m3;
+	cout<<"Enter first matrix values ="<<endl;
+	m1.getdata();
+	cout<<"Enter second matrix values ="<<endl;
+	m2.getdata();
+	system("cls");
+	cout<<"First matrix value ="<<endl;
+	m1.display();
+	cout<<"Second matrix value ="<<endl;
+	m2.display();
+	m3=m1+m2;
+	cout<<"Addition of two matrix is ="<<endl;
+	m3.display();
+	m3=m1-m2;
+	cout<<"Subtraction of two matrix is ="<<endl;
+	m3.display();
+	m3=m1*m2;
+	cout<<"Multiplication of two matrix is ="<<endl;
+	m3.display();
+}
+/**********************OUT PUT**************************
+First matrix value =
+  1  2  3
+  4  5  6
+  7  8  9
+Second matrix value =
+  1  2  3
+  4  5  6
+  7  8  9
+Addition of two matrix is =
+  2  4  6
+  8 10 12
+ 14 16 18
+Subtraction of two matrix is =
+  0  0  0
+  0  0  0
+  0  0  0
+Multiplication of two matrix is =
+ 30 36 42
+ 66 81 96
+ 102126150
+Press any key to continue*******************************/

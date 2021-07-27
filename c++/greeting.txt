@@ -1,0 +1,59 @@
+//mca 104
+//Krupa
+//prog=greetings
+//greeting
+/*******************************************************************/
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GREETINGS.CS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string S;
+            float Time, T;
+            Console.WriteLine("Enter The Name");
+            S = (Console.ReadLine());           
+            Console.WriteLine("Enter The Time");
+            T = float.Parse(Console.ReadLine());
+            if ((T >= 1) && (T <= 12))
+            {
+                Console.WriteLine("Good Morning");
+                Console.ReadLine();
+            }
+            else
+             
+               if ((T > 12) && (T <= 17))
+               {
+                Console.WriteLine("Good Afternoon");
+                   Console.ReadLine();
+               }
+               else 
+                   if((T > 17) && (T <= 20))
+               {
+                 Console.WriteLine("Good Evening");
+                  Console.ReadLine();
+               }
+                 if ((T > 20) && (T <= 24))
+                {
+                  Console.WriteLine("Good Night");
+                  Console.ReadLine();
+                }
+        }
+    }
+}
+/*********************************************************
+Enter The Name
+krupa
+Enter The Time
+10
+Good Morning************************************************/
+
+
+
+         

@@ -1,0 +1,100 @@
+//mca104
+//krupa
+//SECOND SEM
+
+/* PROGRAM=3.Create  class  String, then  overload  + and - operator. 
+e.g.
+          String s1("gujarat vidyapith");
+          String S2("vidya");S3;
+          s3 = s1 - s2;
+          cout << s3;
+          then s3 is "gujarat pith",      
+          etc...
+********************************************************/
+#include<string.h>
+#include<iostream.h>
+class string
+{
+	int len;
+	char *str1;
+public:
+	string()
+	{
+		str1=new char[];
+		strcpy(str1,"");
+	}
+	string(char *s1)
+	{
+		len=strlen(s1);
+		str1=new char[len+1];
+		strcpy(str1,s1);
+	}
+	string operator +(string);
+	string operator -(string);
+	void disp()
+	{
+		cout<<str1<<endl;
+	}
+};
+string string :: operator +(string s)
+{
+	string temp;
+	strcpy(temp.str1,str1);
+	strcat(temp.str1,s.str1);
+	
+	return temp;
+}
+string string :: operator - (string s)
+{	
+	string temp;
+	int i=0,j=0,k,p;
+
+	while (str1[i]!=s.str1[j])
+	{
+		i++;
+	}	
+	k=i;
+	while (str1[i]==s.str1[j])
+	{
+		i++;
+		j++;
+	}	
+	p=i;
+	i=0,j=0;
+	int ln;
+	ln=strlen(str1);
+	while(j<len)
+	{
+		if (j==k)
+		{
+			j=p;
+		}
+		temp.str1[i]=str1[j];
+		i++;
+		j++;
+	}
+	
+	return temp;
+}
+void main()
+{
+	string s1("GUJARAT VIDHYAPITH ");
+	string s2("MCA SEM SECOND");
+	string s3;
+	string s4("VIDHYA");
+	
+	s1.disp();
+	s2.disp();
+	s3=s1+s2;
+	s3.disp();
+	s4.disp();
+	s3=s1-s4;
+	s3.disp();
+}
+/********************** OUTPUT ***********************
+GUJARAT VIDHYAPITH
+MCA SEM SECOND
+GUJARAT VIDHYAPITH MCA SEM SECOND
+VIDHYA
+GUJARAT PITH
+Press any key to continue****************************/

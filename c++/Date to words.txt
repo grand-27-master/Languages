@@ -1,0 +1,51 @@
+///mca 104
+//second sem
+//krupa
+//program ----> Program is to convert date in words.*/
+/**************************************************************/
+using System;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           string []month={ "jan","feb","mar","april","may","june","july","august","sep","oct","nov","dec"};
+            int dd, mm, yy;
+            float ms;
+            dd = int.Parse(Console.ReadLine());
+           mm = int.Parse(Console.ReadLine());
+           yy=Convert.ToInt32(Console.ReadLine());
+
+
+
+           if (dd == 1 || dd == 21 || dd == 31)
+           {
+               Console.WriteLine("our date is ======>" + dd + "st" + month[mm - 1] + " - " + yy);
+              
+           }
+           if (dd == 2 || dd == 22)
+           {
+               Console.WriteLine("our date is ======>" + dd + "nd" + month[mm - 1] + " - " + yy);
+                    }
+           if (dd == 3 || dd == 23)
+           {
+               Console.WriteLine("our date is ======>" + dd + "rd" + month[mm - 1] + " - " + yy);
+              
+           }
+         if (dd!=1||dd!=21||dd!=31||dd!=2||dd!=22||dd!=3||dd!=23)
+             Console.WriteLine("our date is ======>" + dd + "th " + month[mm - 1] + " - " + yy);            
+            Console.Read();
+       }
+   }
+
+/*   
+ ********
+  OUTPUT
+ ********
+10
+03
+1986
+our date is ======>10th mar - 1986
+ * /
+
+

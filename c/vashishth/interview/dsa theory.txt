@@ -1,0 +1,17 @@
+Q)which ds is used in recursion?
+
+A)stack is used as it is based on LIFO
+
+Q)when is binary search best applied?
+
+A)when elements are already sorted
+
+Q)exp. bubble sort?
+
+A)here adjacent values are compared and sorted accordingly
+
+Q)what is empty()?
+
+A)this is used in queue to check wether there exist an element which has to be removed
+
+Q)

@@ -1,0 +1,91 @@
+Q)diff. b/w structs and union?
+
+A)struct sample		union sample
+{			{
+	int x;		   int x;
+	char y;		   char y;	
+}s;			}s;
+
+in struct there are 2 memory blocks created (x&y),
+while in union there is only 1 memory block (x or y).
+
+
+Q)what is diff. b/w #include"..." & #include"<...>"?
+
+A)#include"..." preprocessor looks for file to be included in same directory  where current source file is kept.
+
+
+  #include"<...>"  preprocessor looks for file in directories pre-assigned by pc(std. libraries)
+
+
+Q)what are dangling pointers & memory leaks?
+
+A)dangling pointers points to locations which are already freed.
+  
+  memory leaks occur when locations aren't freed & there is no way to refer them.
+
+
+Q)what is diff. b/w ++i & i++?
+
+A) int x=10,y,z;
+
+   y=++x;(11, increment before assigning)
+   z=x++;(10,increment after assigning)
+
+
+Q)what is diff. b/w "&" & "*"?
+
+A)"*" points to a variable
+
+  "&" gives address of variable
+
+Q)what is "goto"?
+
+A)"goto" is used to transfer flow to specific label or function(generally in loops)
+  
+  while(...)
+  {
+    ------;
+    -------;
+    goto func;
+    --------;
+  }
+  
+  void func(...)
+  {
+    ------;
+  }
+
+
+Q)what is extern and static func?
+
+A)extern is in-built func(main())
+
+  static is user defined func.
+
+Q)what does int(*p)[10]; mean?
+
+A)p is pointer to an array of 10 integers.
+
+Q)what is diff. b/w new & malloc?
+
+A)new initializes allocated memory by calling constructor and using delete keyword to delete.
+
+  malloc allocates un-initialized memory and using free to delete.
+
+Q)what is dynamic(or late) binding?
+
+A) means that code associated with  given procedure call isn't known until time of call at run time.
+
+Q)what is diff. b/w implicit and excplicit conversion?
+
+A)implicit conversion is converting from small to large datatypes & vice versa.
+
+Q)how can you re-allocate pointers?
+
+A)by using re-alloc()
+
+  str=(char*)malloc(10)
+  str=(char*)realloc(str,20) 
+
+  

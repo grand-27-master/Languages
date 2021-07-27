@@ -1,0 +1,93 @@
+//MCA 104
+//KRUPA
+//SEM-2
+//PROGRAM-1
+//================================================================================
+#include<iostream.h>
+#define size 3
+
+class matrix
+	
+{
+   private:
+		int a[size][size];
+	public:
+		void read()
+		{
+		  for(int i=0;i<size;++i)
+		  {
+			  for(int j=0;j<size;j++)
+			  {
+				  cin>>a[i][j];
+
+			  }
+		  }
+		}
+	void show()
+	  {
+		  for(int i=0;i<size;i++)
+		  {
+			  for(int j=0;j<size;j++)
+			  {
+				  cout<<a[i][j]<<"\t";
+			  }
+			  cout<<"\n";
+
+		  }
+	  }
+   matrix operator*(matrix t)
+	  {
+			  matrix temp;
+			  for(int i=0;i<size;++i)
+			  {
+				  for(int j=0;j<size;++j)
+				  {
+					  temp.a[i][j]=0;
+					  for(int k=0;k<size;++k)
+					  {
+						  temp.a[i][j]+=a[i][k]*t.a[k][j];
+					  }
+				  }
+			  }
+			  return temp;
+	  }//fun
+};//class
+		  
+  void main()
+	{
+			matrix m1,m2,m3;
+			cout<<"ENTER FIRST MATRIX IS=\n";
+			m1.read();
+			cout<<"ENTER SECOND MATRIX IS=\n";
+			m2.read();
+			cout<<" YOUR THIRD MATRIX IS=\n";
+			m3=m1*m2;
+			m3.show();
+	}
+  /******************* OUT PUT***********************
+
+ENTER FIRST MATRIX IS=
+1
+2
+3
+4
+5
+6
+7
+8
+9
+ENTER SECOND MATRIX IS=
+1
+2
+3
+4
+5
+6
+7
+8
+9
+ YOUR THIRD MATRIX IS=
+30      36      42
+66      81      96
+102     126     150
+***************************************************/
