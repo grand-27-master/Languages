@@ -1,3 +1,3 @@
 # Languages
 
-## Notes of C++,C,Java and Python
+## Notes of C++, C, Java and Python
